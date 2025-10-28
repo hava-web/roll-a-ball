@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "NewInputAction",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "3d217397-ee56-4b64-b444-ea91d6f1aa70",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Button",
+                    "id": "8a7f967a-25ea-4b8f-b805-0cef83f94b7c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "00c55fac-dbe1-44f8-a344-6823535ab314",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1ec34bd8-9575-47b2-b6bd-6c48be2cd472",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1cbbd5b7-70e1-44b2-8675-0545f156fbcc",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
