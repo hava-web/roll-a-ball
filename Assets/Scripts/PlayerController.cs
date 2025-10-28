@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,7 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     // Rigidbody of the player.
     private Rigidbody rb;
-
+    private int count;
+    public TextMeshProUGUI countText;
     // Movement along X and Y axes.
     private float movementX;
     private float movementY;
@@ -21,6 +20,8 @@ public class PlayerController : MonoBehaviour
     {
         // Get and store the Rigidbody component attached to the player.
         rb = GetComponent<Rigidbody>();
+        count = 0;
+        SetCountText();
     }
 
     // This function is called when a move input is detected.
@@ -44,12 +45,22 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(movement * speed);
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("PickUp"))
+        // Check if the object the player collided with has the "PickUp" tag.
+        if (other.gameObject.CompareTag("PickUp"))
         {
-            // Deactivate the picked-up object.
+            // Deactivate the collided object (making it disappear).
             other.gameObject.SetActive(false);
+            count += 1;
+            SetCountText();
         }
     }
+
+    void SetCountText()
+    {
+        countText.text = "Count: " + count.ToString();
+    }
+
+
 }
